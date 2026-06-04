@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Quick Connect Icons */}
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Arankan05"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-white transition-colors"
@@ -63,7 +63,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/arankan?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-white transition-colors"

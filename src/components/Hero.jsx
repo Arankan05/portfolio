@@ -68,7 +68,7 @@ const Hero = () => {
               <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Connect:</span>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Arankan05"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 hover:bg-slate-850 hover:shadow-md hover:shadow-indigo-500/5 hover:rotate-[360deg] transition-all duration-500"
@@ -77,7 +77,7 @@ const Hero = () => {
                   <Github size={18} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/arankan?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800/80 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 hover:bg-slate-850 hover:shadow-md hover:shadow-indigo-500/5 hover:rotate-[360deg] transition-all duration-500"
