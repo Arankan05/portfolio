@@ -6,12 +6,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SpaceBackground from './components/SpaceBackground';
+import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
-    <div className="bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-white relative min-h-screen">
-      <SpaceBackground />
+    <div className="bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500/30 selection:text-white relative overflow-x-hidden">
+      <ParticleBackground />
       <Navbar />
       <main>
         <Hero />
