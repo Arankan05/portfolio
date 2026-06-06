@@ -11,6 +11,7 @@ const Skills = () => {
         { name: 'HTML5 / CSS3', level: 90 },
         { name: 'JavaScript (ES6+)', level: 85 },
         { name: 'React.js', level: 80 },
+        { name: 'React Native & Expo', level: 80 },
         { name: 'Tailwind CSS', level: 90 },
       ],
     },
@@ -31,6 +32,7 @@ const Skills = () => {
         { name: 'MySQL', level: 80 },
         { name: 'MongoDB', level: 70 },
         { name: 'Firebase', level: 75 },
+        { name: 'Supabase', level: 75 },
       ],
     },
     {

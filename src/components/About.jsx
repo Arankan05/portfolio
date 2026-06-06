@@ -4,9 +4,9 @@ import ScrollReveal from './ScrollReveal';
 
 const About = () => {
   const stats = [
-    { label: 'Completed Projects', value: '3' },
+    { label: 'Completed Projects', value: '4' },
     { label: 'Programming Languages', value: '5+' },
-    { label: 'GitHub Repositories', value: '3' },
+    { label: 'GitHub Repositories', value: '7' },
   ];
 
   const focusCards = [

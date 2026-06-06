@@ -10,6 +10,15 @@ const Projects = () => {
 
   const projectsData = [
     {
+      title: 'Prompt2PicAI',
+      category: 'Web & AI',
+      image: '/prompt2pic_showcase.png',
+      description: 'A premium text-to-image generator mobile application built with React Native, Expo, and Supabase. Features semantic prompt analysis, safe content filtering, history synchronization, and a curated high-fidelity local artwork gallery engine.',
+      tech: ['React Native', 'Expo Router', 'Supabase', 'TypeScript', 'AI Generation'],
+      github: 'https://github.com/Arankan05/Prompt2PicAI.git',
+      demo: 'https://github.com/Arankan05/Prompt2PicAI.git',
+    },
+    {
       title: 'Arduino Radar System',
       category: 'IoT & Systems',
       image: '/arduino_radar.png',

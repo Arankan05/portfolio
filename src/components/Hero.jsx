@@ -40,7 +40,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
-              Passionate IT undergraduate with interests in full-stack web development, AI, hardware systems, and IoT technologies. Dedicated to building modern, scalable, and user-friendly digital solutions that combine software and smart technologies to solve real-world challenges.
+              Passionate IT undergraduate with interests in full-stack web & mobile development, AI, hardware systems, and IoT technologies. Dedicated to building modern, scalable, and user-friendly digital solutions that combine software and smart technologies to solve real-world challenges.
             </p>
 
             {/* CTAs */}
@@ -133,13 +133,13 @@ const Hero = () => {
                   skills: [
                 </div>
                 <div className="pl-8 text-purple-400">
-                  'React', 'Node.js', 'TailwindCSS',
+                  'React', 'React Native', 'Expo',
                 </div>
                 <div className="pl-8 text-purple-400">
-                  'JavaScript', 'SQL', 'Git'
+                  'Node.js', 'Supabase', 'Git',
                 </div>
                 <div className="pl-8 text-purple-400">
-                  'Java', 'C++', 'HTML'
+                  'TailwindCSS', 'JavaScript', 'SQL'
                 </div>
                 <div className="pl-4">],</div>
                 <div className="pl-4">
