@@ -19,9 +19,9 @@ const Projects = () => {
       demo: 'https://github.com/Arankan05/Prompt2PicAI.git',
     },
     {
-      title: 'Cyber Neon Tic Tac Toe',
+      title: 'Tic Tac Toe',
       category: 'Web & AI',
-      image: '/tictactoe.png',
+      image: '/tictactoe_showcase.png',
       description: 'A premium, animated Tic-Tac-Toe web application. Features multiple immersive styling themes (Standard, Nature, Neon, Water, Space), dynamic retro-futuristic sound synthesis via the Web Audio API, persisted game statistics, and an unbeatable AI powered by the recursive Minimax decision tree algorithm.',
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Web Audio API'],
       github: 'https://github.com/Arankan05/Tic-Tac-Toe.git',
@@ -56,14 +56,14 @@ const Projects = () => {
     },
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projectsData 
+  const filteredProjects = activeFilter === 'All'
+    ? projectsData
     : projectsData.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" className="py-24 bg-slate-950/40 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-base font-semibold text-indigo-400 tracking-wider uppercase mb-2">My Portfolio</h2>
@@ -79,11 +79,10 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-300 ${
-                activeFilter === category
+              className={`px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-300 ${activeFilter === category
                   ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/20'
                   : 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white hover:border-slate-700'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -93,8 +92,8 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <ScrollReveal 
-              key={index} 
+            <ScrollReveal
+              key={index}
               delay={index * 100}
               className="w-full"
             >
