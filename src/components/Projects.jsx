@@ -5,6 +5,7 @@ import ScrollReveal from './ScrollReveal';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const categories = ['All', 'Web & AI', 'IoT & Systems', 'Data Science'];
 
@@ -16,7 +17,7 @@ const Projects = () => {
       description: 'A premium text-to-image generator mobile application built with React Native, Expo, and Supabase. Features semantic prompt analysis, safe content filtering, history synchronization, and a curated high-fidelity local artwork gallery engine.',
       tech: ['React Native', 'Expo Router', 'Supabase', 'TypeScript', 'AI Generation'],
       github: 'https://github.com/Arankan05/Prompt2PicAI.git',
-      demo: 'https://github.com/Arankan05/Prompt2PicAI.git',
+      demo: 'https://github.com/user-attachments/assets/b1a84d2e-df0c-4400-ac91-022878da7f13',
     },
     {
       title: 'Tic Tac Toe',
@@ -25,7 +26,7 @@ const Projects = () => {
       description: 'A premium, animated Tic-Tac-Toe web application. Features multiple immersive styling themes (Standard, Nature, Neon, Water, Space), dynamic retro-futuristic sound synthesis via the Web Audio API, persisted game statistics, and an unbeatable AI powered by the recursive Minimax decision tree algorithm.',
       tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Web Audio API'],
       github: 'https://github.com/Arankan05/Tic-Tac-Toe.git',
-      demo: 'https://github.com/Arankan05/Tic-Tac-Toe.git',
+      demo: 'https://tic-tac-toe-ten-silk-86.vercel.app/',
     },
     {
       title: 'Arduino Radar System',
@@ -43,7 +44,7 @@ const Projects = () => {
       description: 'An interactive diet and nutrition assistant chatbot that leverages Natural Language Processing to understand user queries, recommend tailored meal plans, and track caloric intake.',
       tech: ['Python', 'Flask', 'NLP', 'JavaScript', 'HTML/CSS'],
       github: 'https://github.com/Arankan05/diet_Chatbot.git',
-      demo: 'https://github.com/Arankan05/diet_Chatbot.git',
+      demo: 'https://github.com/Arankan05/Arduino-radar#-demonstration',
     },
     {
       title: 'Retail Customer ML Analysis',
@@ -59,6 +60,10 @@ const Projects = () => {
   const filteredProjects = activeFilter === 'All'
     ? projectsData
     : projectsData.filter(project => project.category === activeFilter);
+
+  const displayedProjects = (activeFilter === 'All' && !isExpanded)
+    ? filteredProjects.slice(0, 4)
+    : filteredProjects;
 
   return (
     <section id="projects" className="py-24 bg-slate-950/40 relative">
@@ -78,10 +83,13 @@ const Projects = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveFilter(category)}
+              onClick={() => {
+                setActiveFilter(category);
+                setIsExpanded(false);
+              }}
               className={`px-5 py-2 text-sm font-semibold rounded-xl transition-all duration-300 ${activeFilter === category
-                  ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/20'
-                  : 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white hover:border-slate-700'
+                ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-purple-500/20'
+                : 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white hover:border-slate-700'
                 }`}
             >
               {category}
@@ -91,7 +99,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <ScrollReveal
               key={index}
               delay={index * 100}
@@ -164,6 +172,17 @@ const Projects = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        {activeFilter === 'All' && filteredProjects.length > 4 && (
+          <div className="flex justify-center mt-16">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm cursor-pointer"
+            >
+              {isExpanded ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
