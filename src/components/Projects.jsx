@@ -19,6 +19,15 @@ const Projects = () => {
       demo: 'https://github.com/Arankan05/Prompt2PicAI.git',
     },
     {
+      title: 'Cyber Neon Tic Tac Toe',
+      category: 'Web & AI',
+      image: '/tictactoe.png',
+      description: 'A premium, animated Tic-Tac-Toe web application. Features multiple immersive styling themes (Standard, Nature, Neon, Water, Space), dynamic retro-futuristic sound synthesis via the Web Audio API, persisted game statistics, and an unbeatable AI powered by the recursive Minimax decision tree algorithm.',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Web Audio API'],
+      github: 'https://github.com/Arankan05/Tic-Tac-Toe.git',
+      demo: 'https://github.com/Arankan05/Tic-Tac-Toe.git',
+    },
+    {
       title: 'Arduino Radar System',
       category: 'IoT & Systems',
       image: '/arduino_radar.png',
